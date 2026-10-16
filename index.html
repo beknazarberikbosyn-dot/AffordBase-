@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AffordBase — доступное жильё вместе</title>
+  <meta name="description" content="AffordBase: совместное строительство, умная совместная аренда, альтернативный скоринг, фонд защиты от выселения и юридическая самооборона для тех, кому жильё не по карману.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' fill='%2314302B'/%3E%3Crect x='4' y='14' width='6' height='6' fill='%23F0BE2C'/%3E%3Crect x='12' y='14' width='6' height='6' fill='%23E7E9E4'/%3E%3Crect x='20' y='14' width='6' height='6' fill='%23E7E9E4'/%3E%3Crect x='12' y='6' width='6' height='6' fill='%23E7E9E4'/%3E%3Crect x='4' y='22' width='6' height='4' fill='%23E7E9E4'/%3E%3Crect x='12' y='22' width='6' height='4' fill='%23F0BE2C'/%3E%3Crect x='20' y='22' width='6' height='4' fill='%23E7E9E4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="top">
+  <a class="brand" href="#" aria-label="AffordBase, на главную">
+    <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="3" fill="var(--ink)"/><rect x="4" y="14" width="6" height="6" fill="var(--signal)"/><rect x="12" y="14" width="6" height="6" fill="var(--concrete)"/><rect x="20" y="14" width="6" height="6" fill="var(--concrete)"/><rect x="12" y="6" width="6" height="6" fill="var(--concrete)"/><rect x="4" y="22" width="6" height="4" fill="var(--concrete)"/><rect x="12" y="22" width="6" height="4" fill="var(--signal)"/><rect x="20" y="22" width="6" height="4" fill="var(--concrete)"/></svg>
+    <span>AffordBase</span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Разделы</button>
+  <nav id="nav" class="nav" aria-label="Разделы платформы">
+    <a href="#build">Стройка</a>
+    <a href="#match">Соарендаторы</a>
+    <a href="#score">Индекс</a>
+    <a href="#vault">Фонд</a>
+    <a href="#legal">Юрист</a>
+    <a href="#partners">Партнёрам</a>
+    <a href="#green">Коммуналка</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Квартира, которую собирают по одному метру</h1>
+    <p class="lead">AffordBase объединяет тех, кому не дают ипотеку и кому аренда съедает половину дохода: молодых специалистов, семьи, мигрантов, самозанятых. Вместе дешевле строить, снимать и выкупать.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#build">Вступить в стройкооператив</a>
+      <a class="btn btn-ghost" href="#match">Найти соарендаторов</a>
+    </div>
+    <dl class="hero-facts">
+      <div><dt>до 30%</dt><dd>дешевле материалы напрямую от поставщиков</dd></div>
+      <div><dt>40–60%</dt><dd>экономии на аренде в общей квартире</dd></div>
+      <div><dt>3 мес.</dt><dd>аренды покрывает фонд, если случилась беда</dd></div>
+    </dl>
+  </div>
+
+  <div class="flat" aria-labelledby="flat-title">
+    <div class="flat-head">
+      <h2 id="flat-title">Ваша будущая квартира: 54 м² в доме «Береке»</h2>
+      <p class="muted">Каждая клетка — один квадратный метр. Жёлтые уже ваши. За остальные вы платите аренду, пока не выкупите их.</p>
+    </div>
+    <div id="flat-grid" class="flat-grid" role="img" aria-label="План квартиры из 54 клеток по одному квадратному метру"></div>
+    <ul id="flat-legend" class="flat-legend"></ul>
+    <div class="flat-controls">
+      <label for="flat-pay">Ваш взнос в месяц: <strong id="flat-pay-out">120 000 ₸</strong></label>
+      <input id="flat-pay" type="range" min="30000" max="400000" step="10000" value="120000">
+      <p id="flat-calc" class="flat-calc"></p>
+      <button id="flat-buy" class="btn btn-signal">Выкупить 1 м²</button>
+    </div>
+  </div>
+</section>
+
+<section class="audience" aria-label="Для кого платформа">
+  <p>Для тех, кого не видит банк:</p>
+  <ul>
+    <li>молодые специалисты без накоплений на первый взнос</li>
+    <li>семьи с низким доходом</li>
+    <li>мигранты без кредитной истории</li>
+    <li>самозанятые, курьеры, таксисты, фрилансеры</li>
+  </ul>
+</section>
+
+<!-- 1. CO-BUILDING -->
+<section id="build" class="module">
+  <header class="module-head">
+    <h2>Совместное строительство и микроинвестиции</h2>
+    <p class="en">Co-Building &amp; Micro-Equity</p>
+    <p>Вместо ипотеки — кооператив. Выберите участок, вступите в пул и выкупайте метры будущего дома постепенно, по модели rent-to-own. Доли, риски и очередь на заселение считаются автоматически и видны всем участникам.</p>
+  </header>
+
+  <div class="tool tool-split">
+    <div class="panel">
+      <h3>Карта участков и проектов</h3>
+      <svg id="plot-map" class="plot-map" viewBox="0 0 520 340" role="group" aria-label="Карта земельных участков"></svg>
+      <p class="muted small">Схема условная. Нажмите на участок, чтобы увидеть проект.</p>
+    </div>
+    <div class="panel" id="plot-info" aria-live="polite"></div>
+  </div>
+
+  <div class="tool panel">
+    <h3>Ваш пул: доли, риски и очередь</h3>
+    <p class="muted">Измените свой вклад и активность — доли и место в очереди пересчитаются. Очередь: 70% веса — вклад, 30% — активность в сообществе.</p>
+    <div class="pool-me">
+      <label>Ваш вклад, м² <input id="me-m2" type="number" min="0" max="80" value="6"></label>
+      <label>Ваша активность, баллов <input id="me-act" type="number" min="0" max="100" value="55"></label>
+    </div>
+    <div class="table-wrap">
+      <table class="data" id="pool-table">
+        <thead><tr><th>Участник</th><th>Выкуплено, м²</th><th>Доля</th><th>Доля риска, ₸</th><th>Активность</th><th>Очередь</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="tool panel">
+    <h3>Материалы от проверенных поставщиков</h3>
+    <p class="muted">Отметьте позиции для общей закупки пула — увидите экономию против рыночной цены.</p>
+    <div class="table-wrap">
+      <table class="data" id="supply-table">
+        <thead><tr><th><span class="sr-only">В закупку</span></th><th>Поставщик</th><th>Что поставляет</th><th>Цена пулу</th><th>Рынок</th><th>Скидка</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="supply-total" id="supply-total" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- 2. CO-LIVING -->
+<section id="match" class="module">
+  <header class="module-head">
+    <h2>Подбор соарендаторов</h2>
+    <p class="en">AI-Powered Co-Living Matcher</p>
+    <p>Расскажите о себе — алгоритм найдёт людей с похожим графиком, привычками и бюджетом, чтобы снять большую квартиру вместе. Договор совместной аренды с защитой от внезапного выселения и повышения платы собирается в один клик.</p>
+  </header>
+  <div class="tool tool-split">
+    <form class="panel form" id="match-form">
+      <h3>Ваш профиль</h3>
+      <label>Имя <input name="name" value="Айдана" required></label>
+      <label>Профессия <input name="job" value="медсестра"></label>
+      <div class="row2">
+        <label>Подтверждённый доход, ₸/мес <input name="income" type="number" min="0" step="10000" value="280000"></label>
+        <label>Предел на жильё, ₸/мес <input name="budget" type="number" min="0" step="5000" value="110000"></label>
+      </div>
+      <label>График работы
+        <select name="schedule">
+          <option value="day">дневной, 9–18</option>
+          <option value="shift" selected>сменный</option>
+          <option value="night">ночной</option>
+          <option value="remote">удалённо из дома</option>
+        </select>
+      </label>
+      <label>Район
+        <select name="district">
+          <option>Есиль</option><option selected>Алматы</option><option>Сарыарка</option><option>Байконур</option><option>Нура</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Бытовые привычки</legend>
+        <label class="check"><input type="checkbox" name="habits" value="nosmoke" checked> не курю</label>
+        <label class="check"><input type="checkbox" name="habits" value="quiet" checked> тишина после 22:00</label>
+        <label class="check"><input type="checkbox" name="habits" value="cook" checked> готовлю дома</label>
+        <label class="check"><input type="checkbox" name="habits" value="pets"> есть питомец</label>
+        <label class="check"><input type="checkbox" name="habits" value="guests"> часто гости</label>
+      </fieldset>
+      <button class="btn btn-primary" type="submit">Подобрать соарендаторов</button>
+    </form>
+    <div class="panel" id="match-result" aria-live="polite">
+      <h3>Совпадения</h3>
+      <p class="empty">Заполните профиль и нажмите «Подобрать соарендаторов». Мы покажем трёх самых совместимых людей и сколько вы сэкономите вместе.</p>
+    </div>
+  </div>
+  <div class="panel tool" id="lease-wrap" hidden>
+    <div class="doc-head">
+      <h3>Договор совместной аренды</h3>
+      <button class="btn btn-ghost" id="lease-download">Скачать договор</button>
+    </div>
+    <pre class="doc" id="lease-text"></pre>
+  </div>
+</section>
+
+<!-- 3. SCORING -->
+<section id="score" class="module">
+  <header class="module-head">
+    <h2>Индекс надёжности вместо кредитной истории</h2>
+    <p class="en">Alternative Financial Scoring</p>
+    <p>Банк не видит, что вы три года вовремя платите за свет и каждый месяц зарабатываете на доставке. Мы видим. Индекс надёжности показывают собственникам и инвесторам как гарантию платёжеспособности.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel form" id="score-form">
+      <h3>Ваши данные</h3>
+      <label>Коммунальные платежи вовремя: <strong data-out="util">92%</strong> месяцев
+        <input type="range" name="util" min="0" max="100" value="92"></label>
+      <label>История регулярных переводов: <strong data-out="transfers">18</strong> мес.
+        <input type="range" name="transfers" min="0" max="36" value="18"></label>
+      <label>Колебание гиг-дохода по месяцам: <strong data-out="volatility">25%</strong>
+        <input type="range" name="volatility" min="0" max="80" value="25"></label>
+      <label>Участие в жизни сообщества: <strong data-out="community">6</strong> дел
+        <input type="range" name="community" min="0" max="20" value="6"></label>
+      <label>Доля дохода на жильё: <strong data-out="burden">38%</strong>
+        <input type="range" name="burden" min="10" max="80" value="38"></label>
+      <fieldset>
+        <legend>Источники дохода</legend>
+        <label class="check"><input type="checkbox" name="src" value="taxi" checked> такси</label>
+        <label class="check"><input type="checkbox" name="src" value="courier" checked> курьерская доставка</label>
+        <label class="check"><input type="checkbox" name="src" value="freelance"> фриланс</label>
+        <label class="check"><input type="checkbox" name="src" value="salary"> официальная зарплата</label>
+      </fieldset>
+    </div>
+    <div class="panel score-out">
+      <svg class="gauge" viewBox="0 0 220 130" aria-hidden="true">
+        <path d="M20 115 A90 90 0 0 1 200 115" class="gauge-track"/>
+        <path d="M20 115 A90 90 0 0 1 200 115" class="gauge-fill" id="gauge-fill"/>
+      </svg>
+      <p class="score-num"><span id="score-num">0</span><small> / 900</small></p>
+      <p class="score-band" id="score-band"></p>
+      <h3>Из чего складывается</h3>
+      <ul class="factors" id="score-factors"></ul>
+      <h3>Что поднимет индекс</h3>
+      <ul class="tips" id="score-tips"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4. VAULT -->
+<section id="vault" class="module">
+  <header class="module-head">
+    <h2>Фонд взаимопомощи и защита от выселения</h2>
+    <p class="en">Tenant Resilience &amp; Micro-Insurance Vault</p>
+    <p>С каждой транзакции на платформе 1,5% уходит в общий фонд. Если вы потеряли работу, заболели или задержали зарплату, фонд платит арендодателю напрямую до трёх месяцев — беспроцентно. Вы успеваете встать на ноги, вас не выселяют.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel form" id="vault-form">
+      <h3>Личный кабинет</h3>
+      <div class="row2">
+        <label>Аренда, ₸/мес <input name="rent" type="number" min="0" step="5000" value="120000"></label>
+        <label>Доход, ₸/мес <input name="income" type="number" min="0" step="10000" value="300000"></label>
+      </div>
+      <div class="row2">
+        <label>Расходы без аренды, ₸/мес <input name="spend" type="number" min="0" step="5000" value="110000"></label>
+        <label>Накоплено сейчас, ₸ <input name="saved" type="number" min="0" step="10000" value="260000"></label>
+      </div>
+      <label>Что если…
+        <select name="shock">
+          <option value="none">всё идёт как обычно</option>
+          <option value="job" selected>потеряю работу</option>
+          <option value="ill">заболею на месяц</option>
+          <option value="delay">зарплату задержат на 2 месяца</option>
+        </select>
+      </label>
+      <div class="fund-stats">
+        <div><strong id="fund-balance">48,2 млн ₸</strong><span>в фонде сейчас</span></div>
+        <div><strong>1 214</strong><span>семей остались дома</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Накопления и прогноз на 12 месяцев</h3>
+      <svg id="vault-chart" class="chart" viewBox="0 0 520 240" role="img" aria-label="График накоплений и прогноз кассового разрыва"></svg>
+      <ul class="chart-legend">
+        <li><span class="ln ln-fund"></span>с фондом AffordBase</li>
+        <li><span class="ln ln-plain"></span>без помощи</li>
+      </ul>
+      <p id="vault-gap" class="gap-note" aria-live="polite"></p>
+      <button class="btn btn-danger" id="vault-sos">Запросить помощь фонда</button>
+      <div id="vault-loan" class="loan" hidden aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LEGAL -->
+<section id="legal" class="module">
+  <header class="module-head">
+    <h2>Юридическая самооборона и медиация</h2>
+    <p class="en">AI-Driven Legal Shield &amp; Landlord Mediation</p>
+    <p>Загрузите договор аренды — текстом или фотографией. Опасные пункты подсветятся красным, рядом будет объяснение простыми словами и сколько денег на кону. Если спор уже начался, зафиксируйте состояние жилья: каждый файл получает отпечаток и время фиксации.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel">
+      <div class="doc-head">
+        <h3>Договор</h3>
+        <label class="btn btn-ghost file-btn">Загрузить файл или фото
+          <input type="file" id="contract-file" accept=".txt,image/*">
+        </label>
+      </div>
+      <p id="ocr-status" class="muted small" aria-live="polite"></p>
+      <label class="sr-only" for="contract-text">Текст договора</label>
+      <textarea id="contract-text" rows="14"></textarea>
+      <div class="row-btns">
+        <button class="btn btn-primary" id="contract-check">Проверить договор</button>
+        <label class="inline">Залог, ₸ <input type="number" id="deposit" value="150000" step="10000" min="0"></label>
+      </div>
+    </div>
+    <div class="panel" id="legal-result" aria-live="polite">
+      <h3>Разбор</h3>
+      <p class="empty">Здесь появится договор с подсвеченными пунктами и оценка рисков.</p>
+    </div>
+  </div>
+
+  <div class="tool panel">
+    <div class="doc-head">
+      <h3>Цифровой арбитраж: акт состояния жилья</h3>
+      <select id="act-stage" aria-label="Этап">
+        <option>при заселении</option><option>при выезде</option><option>во время спора</option>
+      </select>
+    </div>
+    <p class="muted">Добавьте фото или видео комнат. Для каждого файла считается SHA-256 отпечаток: если файл позже изменят, отпечаток не совпадёт. Файлы не покидают ваш браузер.</p>
+    <label class="drop" id="act-drop">
+      <input type="file" id="act-files" accept="image/*,video/*" multiple>
+      <span>Перетащите файлы сюда или выберите на устройстве</span>
+    </label>
+    <div class="table-wrap">
+      <table class="data" id="act-table" hidden>
+        <thead><tr><th>Файл</th><th>Снято</th><th>Зафиксировано</th><th>Отпечаток SHA-256</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <button class="btn btn-ghost" id="act-download" hidden>Скачать акт</button>
+  </div>
+</section>
+
+<!-- 6. PARTNERS -->
+<section id="partners" class="module module-dark">
+  <header class="module-head">
+    <h2>Кабинет городов и социальных инвесторов</h2>
+    <p class="en">B2G &amp; ESG Investor Dashboard</p>
+    <p>Акиматы размещают пустующие муниципальные земли и заброшенные здания под социальное и модульное строительство с нулевым налогом. Инвесторы видят обезличенную аналитику по регионам и финансируют пулы напрямую под 3–5% годовых.</p>
+  </header>
+  <div class="tabs" role="tablist" aria-label="Тип партнёра">
+    <button role="tab" id="tab-inv" aria-selected="true" aria-controls="pane-inv">Инвестору</button>
+    <button role="tab" id="tab-city" aria-selected="false" aria-controls="pane-city" tabindex="-1">Городу</button>
+  </div>
+
+  <div id="pane-inv" role="tabpanel" aria-labelledby="tab-inv" class="tool tool-split">
+    <div class="panel panel-dark">
+      <h3>Аналитика по регионам</h3>
+      <div class="table-wrap">
+        <table class="data data-dark" id="region-table">
+          <thead><tr><th>Регион</th><th>Собираемость аренды</th><th>Средний индекс</th><th>Семей в жилье</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="small muted-dark">Данные обезличены и агрегированы. Демонстрационные значения.</p>
+    </div>
+    <div class="panel panel-dark form" id="invest-form">
+      <h3>Профинансировать пул</h3>
+      <label>Пул
+        <select name="pool" id="invest-pool"></select>
+      </label>
+      <label>Сумма, ₸ <input name="amount" type="number" min="1000000" step="1000000" value="50000000"></label>
+      <label>Срок: <strong data-out="years">5</strong> лет <input type="range" name="years" min="1" max="10" value="5"></label>
+      <label>Доходность: <strong data-out="rate">4,0%</strong> годовых <input type="range" name="rate" min="3" max="5" step="0.1" value="4"></label>
+      <div class="invest-out" id="invest-out" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div id="pane-city" role="tabpanel" aria-labelledby="tab-city" class="tool tool-split" hidden>
+    <form class="panel panel-dark form" id="land-form">
+      <h3>Разместить объект</h3>
+      <label>Город или район <input name="where" required placeholder="Например, Астана, р-н Нура"></label>
+      <div class="row2">
+        <label>Тип
+          <select name="kind"><option>свободная земля</option><option>заброшенное здание</option><option>недострой</option></select>
+        </label>
+        <label>Площадь, га <input name="area" type="number" min="0.05" step="0.05" value="1.2" required></label>
+      </div>
+      <label>Назначение
+        <select name="use"><option>модульное строительство</option><option>социальное арендное жильё</option><option>реконструкция под общежитие</option></select>
+      </label>
+      <label class="check"><input type="checkbox" name="zerotax" checked> передаём с нулевым налогом на имущество и землю</label>
+      <button class="btn btn-signal" type="submit">Разместить объект</button>
+      <p class="small" id="land-msg" aria-live="polite"></p>
+    </form>
+    <div class="panel panel-dark">
+      <h3>Объекты на платформе</h3>
+      <div class="table-wrap">
+        <table class="data data-dark" id="land-table">
+          <thead><tr><th>Где</th><th>Тип</th><th>Площадь</th><th>Назначение</th><th>Налог</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. GREEN -->
+<section id="green" class="module">
+  <header class="module-head">
+    <h2>Коммуналка, экономия и зелёные гранты</h2>
+    <p class="en">Green Utility &amp; Smart Maintenance Tracker</p>
+    <p>Подключите умные счётчики или внесите показания вручную. Мы сравним расход с нормой для вашей семьи, подскажем, где теряются деньги, и соберём заявку на грант, если кооператив решит поставить солнечные панели или утеплить дом.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel form" id="green-form">
+      <h3>Показания за месяц</h3>
+      <label>Человек в квартире <input name="people" type="number" min="1" max="12" value="3"></label>
+      <div class="row3">
+        <label>Электричество, кВт·ч <input name="el" type="number" min="0" value="290"></label>
+        <label>Вода, м³ <input name="water" type="number" min="0" step="0.5" value="11"></label>
+        <label>Газ, м³ <input name="gas" type="number" min="0" value="80"></label>
+      </div>
+      <fieldset>
+        <legend>Тарифы, ₸</legend>
+        <div class="row3">
+          <label>за кВт·ч <input name="tel" type="number" step="0.1" value="27.5"></label>
+          <label>за м³ воды <input name="twater" type="number" step="1" value="190"></label>
+          <label>за м³ газа <input name="tgas" type="number" step="0.5" value="42"></label>
+        </div>
+      </fieldset>
+      <div class="bill" id="green-bill" aria-live="polite"></div>
+    </div>
+    <div class="panel">
+      <h3>Где можно сэкономить</h3>
+      <div class="usage" id="green-usage"></div>
+      <ul class="tips" id="green-tips"></ul>
+    </div>
+  </div>
+  <div class="tool panel">
+    <h3>Заявка на зелёный грант для дома</h3>
+    <div class="grant-grid" id="grant-opts"></div>
+    <div class="grant-out" id="grant-out" aria-live="polite"></div>
+    <button class="btn btn-primary" id="grant-make">Сформировать заявку</button>
+    <div id="grant-doc-wrap" hidden>
+      <div class="doc-head"><h3>Заявка</h3><button class="btn btn-ghost" id="grant-download">Скачать заявку</button></div>
+      <pre class="doc" id="grant-doc"></pre>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>Жильё дешевеет, когда люди держатся вместе</h2>
+  <p>AffordBase — прототип платформы. Расчёты на этой странице работают по-настоящему, данные участников и регионов демонстрационные. Разбор договора — подсказка, а не юридическая консультация.</p>
+  <a class="btn btn-signal" href="#build">Начать с выбора участка</a>
+</section>
+</main>
+
+<footer class="foot">
+  <p>© 2026 AffordBase</p>
+  <p class="muted">Совместное строительство, аренда и выкуп жилья для тех, кого не видит банк.</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
