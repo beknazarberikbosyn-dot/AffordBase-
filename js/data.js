@@ -1,4 +1,5 @@
-/* Демонстрационные данные AffordBase. В рабочей версии приходят с бэкенда. */
+/* Демонстрационные данные AffordBase. В рабочей версии приходят с бэкенда.
+   Районы в кандидатах совпадают со значениями селекта «Район» в разметке. */
 window.AB_DATA = {
   // Rent-to-own: метры, которые ещё не ваши, принадлежат инвестору и фонду кооператива.
   // Вы платите аренду только за них и постепенно выкупаете.
@@ -73,5 +74,58 @@ window.AB_DATA = {
     { id: "windows", title: "Энергосберегающие окна", note: "120 окон", cost: 7700000, cover: 0.4, save: 0.08 },
     { id: "meters", title: "Умные счётчики", note: "по 3 на квартиру, 60 квартир", cost: 2700000, cover: 0.7, save: 0.05 },
     { id: "led", title: "LED-освещение подъездов", note: "5 подъездов", cost: 650000, cover: 0.5, save: 0.03 }
-  ]
+  ],
+
+  // Демо-показатели фонда взаимопомощи
+  fundBalance: 48200000,
+  fundFamilies: 1214
 };
+
+/* Английская версия: тексты поверх тех же чисел. Индексы совпадают с массивами выше. */
+(() => {
+  if (document.documentElement.lang !== "en") return;
+  const D = window.AB_DATA;
+  const EN = {
+    flatMembers: [{ name: "Your metres" }, { name: "Social investor" }, { name: "Co-op fund" }],
+    plots: [
+      { title: "Bereke", district: "Nura", type: "Modular building, 5 floors", area: "0.9 ha", ready: "Q4 2027" },
+      { title: "Shanyrak", district: "Yesil", type: "3D-printed townhouses", area: "1.4 ha", ready: "Q2 2027" },
+      { title: "Zhastar", district: "Saryarka", type: "Building retrofit for social rent", area: "0.6 ha", ready: "Q1 2028" },
+      { title: "Dostyk", district: "Almaty", type: "Modular building, 9 floors", area: "1.1 ha", ready: "Q3 2028" },
+      { title: "Samal", district: "Baikonur", type: "3D-printed low-rise homes", area: "2.0 ha", ready: "Q4 2028" }
+    ],
+    pool: [{ name: "Aigerim" }, { name: "Sadykov family" }, { name: "Timur" }, { name: "Madina" }, { name: "Yerzhan" }],
+    suppliers: [
+      { name: "PrintHaus KZ", item: "3D-printed walls, per m² of wall" },
+      { name: "Modul-Stroy", item: "18 m² turnkey living module" },
+      { name: "EcoBlock Karaganda", item: "Aerated concrete block, per m³" },
+      { name: "Warm Home", item: "Mineral wool facade insulation, per m²" },
+      { name: "SunQazaq", item: "450 W solar panel" },
+      { name: "Steppe Windows", item: "Energy-efficient window 1.2×1.4 m" }
+    ],
+    candidates: [
+      { name: "Madina", job: "nurse", district: "Almaty" },
+      { name: "Zhanar", job: "freelance accountant", district: "Almaty" },
+      { name: "Olzhas", job: "courier", district: "Saryarka" },
+      { name: "Dinara", job: "pharmacist", district: "Yesil" },
+      { name: "Akmaral", job: "kindergarten teacher", district: "Almaty" },
+      { name: "Ruslan", job: "taxi driver", district: "Baikonur" },
+      { name: "Gulnur", job: "self-employed seamstress", district: "Nura" },
+      { name: "Saule", job: "student and freelancer", district: "Almaty" }
+    ],
+    regions: [{ name: "Astana" }, { name: "Almaty" }, { name: "Shymkent" }, { name: "Karaganda" }, { name: "Aktobe" }, { name: "Pavlodar" }],
+    lands: [
+      { where: "Astana, Nura district", kind: "vacant land", use: "modular construction" },
+      { where: "Karaganda, Maikuduk", kind: "abandoned building", use: "retrofit into a dormitory" },
+      { where: "Shymkent, Karatau", kind: "unfinished building", use: "social rental housing" }
+    ],
+    grants: [
+      { title: "Rooftop solar panels", note: "40 panels × 450 W" },
+      { title: "Facade insulation", note: "1,800 m² of mineral wool" },
+      { title: "Energy-efficient windows", note: "120 windows" },
+      { title: "Smart meters", note: "3 per flat, 60 flats" },
+      { title: "LED lighting in stairwells", note: "5 entrances" }
+    ]
+  };
+  Object.keys(EN).forEach((k) => EN[k].forEach((patch, i) => Object.assign(D[k][i], patch)));
+})();

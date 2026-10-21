@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AffordBase — доступное жильё вместе</title>
   <meta name="description" content="AffordBase: совместное строительство, умная совместная аренда, альтернативный скоринг, фонд защиты от выселения и юридическая самооборона для тех, кому жильё не по карману.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AffordBase — квартира, которую собирают по одному метру">
+  <meta property="og:description" content="Совместная аренда, индекс надёжности вместо кредитной истории, фонд от выселения и выкуп жилья по 1 м² — для тех, кого не видит банк.">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="theme-color" content="#14302B">
+  <link rel="alternate" hreflang="ru" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,7 +35,9 @@
     <a href="#legal">Юрист</a>
     <a href="#partners">Партнёрам</a>
     <a href="#green">Коммуналка</a>
+    <a href="#impact">О проекте</a>
   </nav>
+  <a class="lang" href="en.html" hreflang="en" lang="en" aria-label="English version">EN</a>
 </header>
 
 <main id="main">
@@ -73,6 +82,18 @@
     <li>мигранты без кредитной истории</li>
     <li>самозанятые, курьеры, таксисты, фрилансеры</li>
   </ul>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey" aria-labelledby="journey-title">
+  <h2 id="journey-title">Путь от аренды к своему жилью</h2>
+  <p class="journey-lead">Семь модулей платформы — это один путь. Каждый шаг делает следующий доступнее.</p>
+  <ol class="steps">
+    <li><span class="step-n">1</span><h3>Снимает вместе</h3><p>Соарендаторы по графику и привычкам. Аренда дешевле на 40–60%.</p><a href="#match">Подбор соарендаторов</a></li>
+    <li><span class="step-n">2</span><h3>Копит репутацию</h3><p>Каждый платёж за жильё и коммуналку повышает индекс надёжности вместо кредитной истории.</p><a href="#score">Индекс надёжности</a></li>
+    <li><span class="step-n">3</span><h3>Защищён от беды</h3><p>Потерял доход — фонд платит аренду до 3 месяцев без процентов. Договор проверен на ловушки.</p><a href="#vault">Фонд взаимопомощи</a></li>
+    <li><span class="step-n">4</span><h3>Выкупает по метру</h3><p>Кооперативный дом на 37% дешевле рынка. Каждый выкупленный метр снижает аренду.</p><a href="#build">Совместное строительство</a></li>
+  </ol>
 </section>
 
 <!-- 1. CO-BUILDING -->
@@ -244,8 +265,9 @@
       </label>
       <div class="fund-stats">
         <div><strong id="fund-balance">48,2 млн ₸</strong><span>в фонде сейчас</span></div>
-        <div><strong>1 214</strong><span>семей остались дома</span></div>
+        <div><strong id="fund-families">1 214</strong><span>семей остались дома</span></div>
       </div>
+      <p class="small muted demo-note"><span class="tag mid">демо</span> Показатели фонда демонстрационные: так будет выглядеть кабинет после запуска.</p>
     </div>
     <div class="panel">
       <h3>Накопления и прогноз на 12 месяцев</h3>
@@ -420,9 +442,85 @@
   </div>
 </section>
 
+<!-- IMPACT -->
+<section id="impact" class="module">
+  <header class="module-head">
+    <h2>Влияние, модель и план</h2>
+    <p class="en">Impact, Business Model &amp; Pilot</p>
+    <p>Как AffordBase меняет жизнь людей, на чём держится экономически и что мы сделаем в первые шесть месяцев пилота.</p>
+  </header>
+
+  <div class="impact-grid">
+    <article class="panel">
+      <h3>Проблема</h3>
+      <ul class="tips">
+        <li>Без кредитной истории и первого взноса ипотека недоступна. Молодые специалисты, мигранты и самозанятые остаются в аренде.</li>
+        <li>Аренда в одиночку съедает 40–60% дохода. Накопить на своё жильё с такой нагрузкой почти невозможно.</li>
+        <li>Один месяц без дохода может закончиться выселением, а договоры часто содержат незаконные условия.</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <h3>Чем мы отличаемся</h3>
+      <ul class="tips">
+        <li>Не один сервис, а цепочка: совместная аренда → репутация → защита → собственность.</li>
+        <li>Платёжная дисциплина в аренде и коммуналке становится активом — индексом надёжности.</li>
+        <li>Жильё выкупается по 1 м², поэтому первый шаг доступен с обычной зарплаты.</li>
+        <li>Город даёт землю, инвестор — деньги под 3–5%, участники — регулярные взносы.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="tool panel">
+    <h3>Что мы измеряем</h3>
+    <div class="kpis">
+      <div><strong>&lt; 30%</strong><span>дохода на жильё у участников (сейчас 40–60%)</span></div>
+      <div><strong>0</strong><span>выселений у участников фонда из-за временной потери дохода</span></div>
+      <div><strong>м²</strong><span>в собственности участников — растёт каждый месяц</span></div>
+      <div><strong>% без КИ</strong><span>участников без кредитной истории, получивших жильё</span></div>
+    </div>
+  </div>
+
+  <div class="impact-grid">
+    <article class="panel">
+      <h3>На чём держится платформа</h3>
+      <dl class="revenue">
+        <dt>Сопровождение стройпула</dt><dd>плата кооператива за управление проектом, закупками и учётом долей</dd>
+        <dt>Оптовые закупки</dt><dd>комиссия поставщиков за гарантированный объём заказа</dd>
+        <dt>Кабинет для городов</dt><dd>подписка акиматов на аналитику и учёт переданных объектов</dd>
+        <dt>Размещение инвестиций</dt><dd>сервисный сбор с инвесторов за финансирование пулов</dd>
+      </dl>
+      <p class="small muted">1,5% с транзакций не являются нашей выручкой: они целиком идут в фонд взаимопомощи участников.</p>
+    </article>
+    <article class="panel">
+      <h3>План пилота на $10 000</h3>
+      <p class="muted small">6 месяцев, Астана: 50 арендаторов и один стройпул.</p>
+      <div class="budget" role="img" aria-label="Распределение бюджета: 40% — разработка, 20% — юристы, 15% — пилот, 15% — разбор договоров, 10% — привлечение участников">
+        <span style="flex:40;background:var(--ink)"></span><span style="flex:20;background:var(--teal)"></span><span style="flex:15;background:var(--signal)"></span><span style="flex:15;background:var(--sky)"></span><span style="flex:10;background:var(--brick)"></span>
+      </div>
+      <ul class="budget-list">
+        <li><i style="background:var(--ink)"></i>Бэкенд, учётные записи, платежи<b>$4 000</b></li>
+        <li><i style="background:var(--teal)"></i>Юристы: договоры и устав кооператива по законам РК<b>$2 000</b></li>
+        <li><i style="background:var(--signal)"></i>Пилот: онбординг, интервью, поддержка участников<b>$1 500</b></li>
+        <li><i style="background:var(--sky)"></i>Разбор договоров: проверка на реальных договорах<b>$1 500</b></li>
+        <li><i style="background:var(--brick)"></i>Привлечение через НКО и сообщества курьеров<b>$1 000</b></li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="tool panel">
+    <h3>Цели устойчивого развития ООН</h3>
+    <ul class="sdg">
+      <li><b style="background:#E5243B">1</b>Ликвидация нищеты</li>
+      <li><b style="background:#FCC30B;color:var(--ink)">7</b>Доступная и чистая энергия</li>
+      <li><b style="background:#DD1367">10</b>Уменьшение неравенства</li>
+      <li><b style="background:#FD9D24;color:var(--ink)">11</b>Устойчивые города и населённые пункты</li>
+    </ul>
+  </div>
+</section>
+
 <section class="closing">
   <h2>Жильё дешевеет, когда люди держатся вместе</h2>
-  <p>AffordBase — прототип платформы. Расчёты на этой странице работают по-настоящему, данные участников и регионов демонстрационные. Разбор договора — подсказка, а не юридическая консультация.</p>
+  <p>AffordBase — рабочий прототип: все расчёты на этой странице работают по-настоящему, данные участников, участков и регионов демонстрационные. Разбор договора — подсказка, а не юридическая консультация.</p>
   <a class="btn btn-signal" href="#build">Начать с выбора участка</a>
 </section>
 </main>
@@ -430,6 +528,7 @@
 <footer class="foot">
   <p>© 2026 AffordBase</p>
   <p class="muted">Совместное строительство, аренда и выкуп жилья для тех, кого не видит банк.</p>
+  <p><a href="en.html" hreflang="en" lang="en">English version</a></p>
 </footer>
 
 <script src="js/data.js"></script>

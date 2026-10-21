@@ -1,5 +1,18 @@
 # AffordBase
 
+**English** · [Live demo (EN)](https://beknazarberikbosyn-dot.github.io/AffordBase-/en.html) · [Русская версия](https://beknazarberikbosyn-dot.github.io/AffordBase-/)
+
+AffordBase is an affordable-housing platform for people banks don't see: young professionals, low-income families, migrants and gig workers in Kazakhstan. It links seven tools into one path from renting to owning:
+
+1. **Rent together.** Co-tenants are matched by schedule, habits and budget, cutting rent by 40–60%.
+2. **Build a track record.** On-time rent and utility payments feed a reliability score (200–900) that replaces a credit history.
+3. **Stay protected.** 1.5% of every transaction goes to a mutual-aid fund that pays rent for up to 3 months, interest-free, if income drops. Leases are checked for unlawful clauses.
+4. **Buy metre by metre.** Co-op buildings on municipal land cost about 37% less than the market. Members buy their flat 1 m² at a time (rent-to-own), and their rent falls with every metre.
+
+This repository is a working static prototype: every calculation runs in the browser, while member, plot and regional data are illustrative.
+
+---
+
 Платформа доступного жилья для тех, кого не видит банк: молодых специалистов, семей с низким доходом, мигрантов и самозанятых. Двухсторонний маркетплейс и крауд-эквити система для совместного строительства, совместной аренды и поэтапного выкупа жилья.
 
 Это статический прототип: все расчёты на странице работают в браузере, данные участников, участков и регионов — демонстрационные.
@@ -30,10 +43,11 @@ python3 -m http.server 8000
 ## Структура
 
 ```
-index.html       разметка всех разделов
+index.html       разметка всех разделов (русский)
+en.html          та же страница на английском
 css/styles.css   стили и адаптивная вёрстка
-js/data.js       демонстрационные данные
-js/app.js        логика всех модулей
+js/data.js       демонстрационные данные и их английские тексты
+js/app.js        логика всех модулей, язык берётся из <html lang>
 ```
 
 ## Что дальше

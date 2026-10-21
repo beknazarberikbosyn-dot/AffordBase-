@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AffordBase — affordable housing, together</title>
+  <meta name="description" content="AffordBase: co-building, smart co-living, alternative credit scoring, an anti-eviction mutual-aid fund and a legal shield for people the housing market leaves out.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AffordBase — a home you buy one square metre at a time">
+  <meta property="og:description" content="Co-living, a reliability score instead of a credit history, an anti-eviction fund and rent-to-own by the square metre, for people banks don't see.">
+  <meta property="og:locale" content="en_US">
+  <meta name="theme-color" content="#14302B">
+  <link rel="alternate" hreflang="ru" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' fill='%2314302B'/%3E%3Crect x='4' y='14' width='6' height='6' fill='%23F0BE2C'/%3E%3Crect x='12' y='14' width='6' height='6' fill='%23E7E9E4'/%3E%3Crect x='20' y='14' width='6' height='6' fill='%23E7E9E4'/%3E%3Crect x='12' y='6' width='6' height='6' fill='%23E7E9E4'/%3E%3Crect x='4' y='22' width='6' height='4' fill='%23E7E9E4'/%3E%3Crect x='12' y='22' width='6' height='4' fill='%23F0BE2C'/%3E%3Crect x='20' y='22' width='6' height='4' fill='%23E7E9E4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="#" aria-label="AffordBase, home">
+    <svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="3" fill="var(--ink)"/><rect x="4" y="14" width="6" height="6" fill="var(--signal)"/><rect x="12" y="14" width="6" height="6" fill="var(--concrete)"/><rect x="20" y="14" width="6" height="6" fill="var(--concrete)"/><rect x="12" y="6" width="6" height="6" fill="var(--concrete)"/><rect x="4" y="22" width="6" height="4" fill="var(--concrete)"/><rect x="12" y="22" width="6" height="4" fill="var(--signal)"/><rect x="20" y="22" width="6" height="4" fill="var(--concrete)"/></svg>
+    <span>AffordBase</span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Sections</button>
+  <nav id="nav" class="nav" aria-label="Platform sections">
+    <a href="#build">Co-build</a>
+    <a href="#match">Co-tenants</a>
+    <a href="#score">Score</a>
+    <a href="#vault">Fund</a>
+    <a href="#legal">Legal</a>
+    <a href="#partners">Partners</a>
+    <a href="#green">Utilities</a>
+    <a href="#impact">Impact</a>
+  </nav>
+  <a class="lang" href="index.html" hreflang="ru" lang="ru" aria-label="Русская версия">RU</a>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>A home you buy one square metre at a time</h1>
+    <p class="lead">AffordBase brings together people who can't get a mortgage and whose rent eats half their income: young professionals, low-income families, migrants and gig workers. Together it is cheaper to build, rent and buy.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#build">Join a building co-op</a>
+      <a class="btn btn-ghost" href="#match">Find co-tenants</a>
+    </div>
+    <dl class="hero-facts">
+      <div><dt>up to 30%</dt><dd>cheaper materials, bought directly from suppliers</dd></div>
+      <div><dt>40–60%</dt><dd>saved on rent in a shared flat</dd></div>
+      <div><dt>3 months</dt><dd>of rent covered by the fund when trouble hits</dd></div>
+    </dl>
+  </div>
+
+  <div class="flat" aria-labelledby="flat-title">
+    <div class="flat-head">
+      <h2 id="flat-title">Your future flat: 54 m² in the “Bereke” building</h2>
+      <p class="muted">Each cell is one square metre. Yellow ones are already yours. You pay rent on the rest until you buy them out.</p>
+    </div>
+    <div id="flat-grid" class="flat-grid" role="img" aria-label="Floor plan of 54 one-square-metre cells"></div>
+    <ul id="flat-legend" class="flat-legend"></ul>
+    <div class="flat-controls">
+      <label for="flat-pay">Your monthly payment: <strong id="flat-pay-out">120,000 ₸</strong></label>
+      <input id="flat-pay" type="range" min="30000" max="400000" step="10000" value="120000">
+      <p id="flat-calc" class="flat-calc"></p>
+      <button id="flat-buy" class="btn btn-signal">Buy 1 m²</button>
+    </div>
+  </div>
+</section>
+
+<section class="audience" aria-label="Who the platform is for">
+  <p>For people banks don't see:</p>
+  <ul>
+    <li>young professionals with no savings for a down payment</li>
+    <li>low-income families</li>
+    <li>migrants with no credit history</li>
+    <li>the self-employed: couriers, taxi drivers, freelancers</li>
+  </ul>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey" aria-labelledby="journey-title">
+  <h2 id="journey-title">From renting to owning a home</h2>
+  <p class="journey-lead">The platform's seven modules form one path. Each step makes the next one affordable.</p>
+  <ol class="steps">
+    <li><span class="step-n">1</span><h3>Rent together</h3><p>Co-tenants matched by schedule and habits. Rent drops by 40–60%.</p><a href="#match">Co-living matcher</a></li>
+    <li><span class="step-n">2</span><h3>Build a track record</h3><p>Every rent and utility payment raises a reliability score that replaces a credit history.</p><a href="#score">Reliability score</a></li>
+    <li><span class="step-n">3</span><h3>Stay protected</h3><p>Lose your income and the fund pays rent for up to 3 months, interest-free. Leases are checked for traps.</p><a href="#vault">Mutual-aid fund</a></li>
+    <li><span class="step-n">4</span><h3>Buy metre by metre</h3><p>A co-op building costs 37% less than the market. Every metre you own lowers your rent.</p><a href="#build">Co-building</a></li>
+  </ol>
+</section>
+
+<!-- 1. CO-BUILDING -->
+<section id="build" class="module">
+  <header class="module-head">
+    <h2>Co-building and micro-equity</h2>
+    <p class="en">Co-Building &amp; Micro-Equity</p>
+    <p>A co-op instead of a mortgage. Choose a plot, join a pool and buy the square metres of your future home gradually, rent-to-own. Shares, risks and the move-in queue are calculated automatically and visible to every member.</p>
+  </header>
+
+  <div class="tool tool-split">
+    <div class="panel">
+      <h3>Map of plots and projects</h3>
+      <svg id="plot-map" class="plot-map" viewBox="0 0 520 340" role="group" aria-label="Map of land plots"></svg>
+      <p class="muted small">Schematic map. Select a plot to see its project.</p>
+    </div>
+    <div class="panel" id="plot-info" aria-live="polite"></div>
+  </div>
+
+  <div class="tool panel">
+    <h3>Your pool: shares, risks and queue</h3>
+    <p class="muted">Change your contribution and activity, and shares and queue positions update. Queue weighting: 70% contribution, 30% community activity.</p>
+    <div class="pool-me">
+      <label>Your contribution, m² <input id="me-m2" type="number" min="0" max="80" value="6"></label>
+      <label>Your activity, points <input id="me-act" type="number" min="0" max="100" value="55"></label>
+    </div>
+    <div class="table-wrap">
+      <table class="data" id="pool-table">
+        <thead><tr><th>Member</th><th>Owned, m²</th><th>Share</th><th>Risk share, ₸</th><th>Activity</th><th>Queue</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="tool panel">
+    <h3>Materials from vetted suppliers</h3>
+    <p class="muted">Tick items for the pool's bulk order to see the savings against market prices.</p>
+    <div class="table-wrap">
+      <table class="data" id="supply-table">
+        <thead><tr><th><span class="sr-only">In the order</span></th><th>Supplier</th><th>Supplies</th><th>Pool price</th><th>Market</th><th>Discount</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="supply-total" id="supply-total" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- 2. CO-LIVING -->
+<section id="match" class="module">
+  <header class="module-head">
+    <h2>Co-tenant matching</h2>
+    <p class="en">AI-Powered Co-Living Matcher</p>
+    <p>Tell us about yourself and the algorithm finds people with a similar schedule, habits and budget to rent a large flat together. A co-living lease that protects you from sudden eviction and rent hikes is generated in one click.</p>
+  </header>
+  <div class="tool tool-split">
+    <form class="panel form" id="match-form">
+      <h3>Your profile</h3>
+      <label>Name <input name="name" value="Aidana" required></label>
+      <label>Occupation <input name="job" value="nurse"></label>
+      <div class="row2">
+        <label>Verified income, ₸/month <input name="income" type="number" min="0" step="10000" value="280000"></label>
+        <label>Housing limit, ₸/month <input name="budget" type="number" min="0" step="5000" value="110000"></label>
+      </div>
+      <label>Work schedule
+        <select name="schedule">
+          <option value="day">day, 9 to 6</option>
+          <option value="shift" selected>shifts</option>
+          <option value="night">nights</option>
+          <option value="remote">remote, from home</option>
+        </select>
+      </label>
+      <label>District
+        <select name="district">
+          <option>Yesil</option><option selected>Almaty</option><option>Saryarka</option><option>Baikonur</option><option>Nura</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Household habits</legend>
+        <label class="check"><input type="checkbox" name="habits" value="nosmoke" checked> non-smoker</label>
+        <label class="check"><input type="checkbox" name="habits" value="quiet" checked> quiet after 10 pm</label>
+        <label class="check"><input type="checkbox" name="habits" value="cook" checked> cook at home</label>
+        <label class="check"><input type="checkbox" name="habits" value="pets"> have a pet</label>
+        <label class="check"><input type="checkbox" name="habits" value="guests"> frequent guests</label>
+      </fieldset>
+      <button class="btn btn-primary" type="submit">Find co-tenants</button>
+    </form>
+    <div class="panel" id="match-result" aria-live="polite">
+      <h3>Matches</h3>
+      <p class="empty">Fill in your profile and press “Find co-tenants”. We'll show the three most compatible people and how much you save together.</p>
+    </div>
+  </div>
+  <div class="panel tool" id="lease-wrap" hidden>
+    <div class="doc-head">
+      <h3>Co-living lease</h3>
+      <button class="btn btn-ghost" id="lease-download">Download lease</button>
+    </div>
+    <pre class="doc" id="lease-text"></pre>
+  </div>
+</section>
+
+<!-- 3. SCORING -->
+<section id="score" class="module">
+  <header class="module-head">
+    <h2>A reliability score instead of a credit history</h2>
+    <p class="en">Alternative Financial Scoring</p>
+    <p>Your bank can't see that you've paid your electricity bill on time for three years, or that you earn from deliveries every month. We can. Landlords and investors see the reliability score as proof that you can pay.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel form" id="score-form">
+      <h3>Your data</h3>
+      <label>Utility bills paid on time: <strong data-out="util">92%</strong> of months
+        <input type="range" name="util" min="0" max="100" value="92"></label>
+      <label>History of regular transfers: <strong data-out="transfers">18</strong> months
+        <input type="range" name="transfers" min="0" max="36" value="18"></label>
+      <label>Month-to-month swing in gig income: <strong data-out="volatility">25%</strong>
+        <input type="range" name="volatility" min="0" max="80" value="25"></label>
+      <label>Community participation: <strong data-out="community">6</strong> activities
+        <input type="range" name="community" min="0" max="20" value="6"></label>
+      <label>Share of income spent on housing: <strong data-out="burden">38%</strong>
+        <input type="range" name="burden" min="10" max="80" value="38"></label>
+      <fieldset>
+        <legend>Income sources</legend>
+        <label class="check"><input type="checkbox" name="src" value="taxi" checked> taxi</label>
+        <label class="check"><input type="checkbox" name="src" value="courier" checked> courier delivery</label>
+        <label class="check"><input type="checkbox" name="src" value="freelance"> freelance</label>
+        <label class="check"><input type="checkbox" name="src" value="salary"> formal salary</label>
+      </fieldset>
+    </div>
+    <div class="panel score-out">
+      <svg class="gauge" viewBox="0 0 220 130" aria-hidden="true">
+        <path d="M20 115 A90 90 0 0 1 200 115" class="gauge-track"/>
+        <path d="M20 115 A90 90 0 0 1 200 115" class="gauge-fill" id="gauge-fill"/>
+      </svg>
+      <p class="score-num"><span id="score-num">0</span><small> / 900</small></p>
+      <p class="score-band" id="score-band"></p>
+      <h3>What it's made of</h3>
+      <ul class="factors" id="score-factors"></ul>
+      <h3>What will raise it</h3>
+      <ul class="tips" id="score-tips"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4. VAULT -->
+<section id="vault" class="module">
+  <header class="module-head">
+    <h2>Mutual-aid fund and eviction protection</h2>
+    <p class="en">Tenant Resilience &amp; Micro-Insurance Vault</p>
+    <p>1.5% of every transaction on the platform goes into a shared fund. If you lose your job, fall ill or your salary is late, the fund pays your landlord directly for up to three months, interest-free. You get back on your feet and keep your home.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel form" id="vault-form">
+      <h3>Your dashboard</h3>
+      <div class="row2">
+        <label>Rent, ₸/month <input name="rent" type="number" min="0" step="5000" value="120000"></label>
+        <label>Income, ₸/month <input name="income" type="number" min="0" step="10000" value="300000"></label>
+      </div>
+      <div class="row2">
+        <label>Other spending, ₸/month <input name="spend" type="number" min="0" step="5000" value="110000"></label>
+        <label>Savings now, ₸ <input name="saved" type="number" min="0" step="10000" value="260000"></label>
+      </div>
+      <label>What if…
+        <select name="shock">
+          <option value="none">everything goes as usual</option>
+          <option value="job" selected>I lose my job</option>
+          <option value="ill">I'm ill for a month</option>
+          <option value="delay">my salary is 2 months late</option>
+        </select>
+      </label>
+      <div class="fund-stats">
+        <div><strong id="fund-balance">48.2M ₸</strong><span>in the fund now</span></div>
+        <div><strong id="fund-families">1,214</strong><span>families kept their homes</span></div>
+      </div>
+      <p class="small muted demo-note"><span class="tag mid">demo</span> Fund figures are illustrative: this is how the dashboard will look after launch.</p>
+    </div>
+    <div class="panel">
+      <h3>Savings and 12-month forecast</h3>
+      <svg id="vault-chart" class="chart" viewBox="0 0 520 240" role="img" aria-label="Chart of savings and forecast cash gap"></svg>
+      <ul class="chart-legend">
+        <li><span class="ln ln-fund"></span>with the AffordBase fund</li>
+        <li><span class="ln ln-plain"></span>without help</li>
+      </ul>
+      <p id="vault-gap" class="gap-note" aria-live="polite"></p>
+      <button class="btn btn-danger" id="vault-sos">Request help from the fund</button>
+      <div id="vault-loan" class="loan" hidden aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LEGAL -->
+<section id="legal" class="module">
+  <header class="module-head">
+    <h2>Legal shield and mediation</h2>
+    <p class="en">AI-Driven Legal Shield &amp; Landlord Mediation</p>
+    <p>Upload your lease as text or a photo. Risky clauses are highlighted in red, with a plain-language explanation and how much money is at stake. If a dispute has started, record the condition of the home: every file gets a fingerprint and a timestamp.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel">
+      <div class="doc-head">
+        <h3>Lease</h3>
+        <label class="btn btn-ghost file-btn">Upload a file or photo
+          <input type="file" id="contract-file" accept=".txt,image/*">
+        </label>
+      </div>
+      <p id="ocr-status" class="muted small" aria-live="polite"></p>
+      <label class="sr-only" for="contract-text">Lease text</label>
+      <textarea id="contract-text" rows="14"></textarea>
+      <div class="row-btns">
+        <button class="btn btn-primary" id="contract-check">Check the lease</button>
+        <label class="inline">Deposit, ₸ <input type="number" id="deposit" value="150000" step="10000" min="0"></label>
+      </div>
+    </div>
+    <div class="panel" id="legal-result" aria-live="polite">
+      <h3>Review</h3>
+      <p class="empty">The lease will appear here with risky clauses highlighted and a risk estimate.</p>
+    </div>
+  </div>
+
+  <div class="tool panel">
+    <div class="doc-head">
+      <h3>Digital arbitration: property condition report</h3>
+      <select id="act-stage" aria-label="Stage">
+        <option>at move-in</option><option>at move-out</option><option>during a dispute</option>
+      </select>
+    </div>
+    <p class="muted">Add photos or videos of the rooms. Each file gets a SHA-256 fingerprint: if the file is altered later, the fingerprint won't match. Files never leave your browser.</p>
+    <label class="drop" id="act-drop">
+      <input type="file" id="act-files" accept="image/*,video/*" multiple>
+      <span>Drag files here or choose them on your device</span>
+    </label>
+    <div class="table-wrap">
+      <table class="data" id="act-table" hidden>
+        <thead><tr><th>File</th><th>Taken</th><th>Recorded</th><th>SHA-256 fingerprint</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <button class="btn btn-ghost" id="act-download" hidden>Download report</button>
+  </div>
+</section>
+
+<!-- 6. PARTNERS -->
+<section id="partners" class="module module-dark">
+  <header class="module-head">
+    <h2>Dashboard for cities and social investors</h2>
+    <p class="en">B2G &amp; ESG Investor Dashboard</p>
+    <p>City administrations (akimats) list vacant municipal land and abandoned buildings for social and modular housing, tax-free. Investors see anonymised regional analytics and fund pools directly at 3–5% a year.</p>
+  </header>
+  <div class="tabs" role="tablist" aria-label="Partner type">
+    <button role="tab" id="tab-inv" aria-selected="true" aria-controls="pane-inv">For investors</button>
+    <button role="tab" id="tab-city" aria-selected="false" aria-controls="pane-city" tabindex="-1">For cities</button>
+  </div>
+
+  <div id="pane-inv" role="tabpanel" aria-labelledby="tab-inv" class="tool tool-split">
+    <div class="panel panel-dark">
+      <h3>Regional analytics</h3>
+      <div class="table-wrap">
+        <table class="data data-dark" id="region-table">
+          <thead><tr><th>Region</th><th>Rent collection</th><th>Average score</th><th>Families housed</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="small muted-dark">Anonymised and aggregated. Demo values.</p>
+    </div>
+    <div class="panel panel-dark form" id="invest-form">
+      <h3>Fund a pool</h3>
+      <label>Pool
+        <select name="pool" id="invest-pool"></select>
+      </label>
+      <label>Amount, ₸ <input name="amount" type="number" min="1000000" step="1000000" value="50000000"></label>
+      <label>Term: <strong data-out="years">5</strong> years <input type="range" name="years" min="1" max="10" value="5"></label>
+      <label>Return: <strong data-out="rate">4.0%</strong> a year <input type="range" name="rate" min="3" max="5" step="0.1" value="4"></label>
+      <div class="invest-out" id="invest-out" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div id="pane-city" role="tabpanel" aria-labelledby="tab-city" class="tool tool-split" hidden>
+    <form class="panel panel-dark form" id="land-form">
+      <h3>List a property</h3>
+      <label>City or district <input name="where" required placeholder="e.g. Astana, Nura district"></label>
+      <div class="row2">
+        <label>Type
+          <select name="kind"><option>vacant land</option><option>abandoned building</option><option>unfinished building</option></select>
+        </label>
+        <label>Area, ha <input name="area" type="number" min="0.05" step="0.05" value="1.2" required></label>
+      </div>
+      <label>Use
+        <select name="use"><option>modular construction</option><option>social rental housing</option><option>retrofit into a dormitory</option></select>
+      </label>
+      <label class="check"><input type="checkbox" name="zerotax" checked> transferred with zero property and land tax</label>
+      <button class="btn btn-signal" type="submit">List property</button>
+      <p class="small" id="land-msg" aria-live="polite"></p>
+    </form>
+    <div class="panel panel-dark">
+      <h3>Properties on the platform</h3>
+      <div class="table-wrap">
+        <table class="data data-dark" id="land-table">
+          <thead><tr><th>Where</th><th>Type</th><th>Area</th><th>Use</th><th>Tax</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. GREEN -->
+<section id="green" class="module">
+  <header class="module-head">
+    <h2>Utilities, savings and green grants</h2>
+    <p class="en">Green Utility &amp; Smart Maintenance Tracker</p>
+    <p>Connect smart meters or enter readings by hand. We compare your use with the norm for your household, show where money leaks, and assemble a grant application if the co-op decides to add solar panels or insulate the building.</p>
+  </header>
+  <div class="tool tool-split">
+    <div class="panel form" id="green-form">
+      <h3>This month's readings</h3>
+      <label>People in the flat <input name="people" type="number" min="1" max="12" value="3"></label>
+      <div class="row3">
+        <label>Electricity, kWh <input name="el" type="number" min="0" value="290"></label>
+        <label>Water, m³ <input name="water" type="number" min="0" step="0.5" value="11"></label>
+        <label>Gas, m³ <input name="gas" type="number" min="0" value="80"></label>
+      </div>
+      <fieldset>
+        <legend>Tariffs, ₸</legend>
+        <div class="row3">
+          <label>per kWh <input name="tel" type="number" step="0.1" value="27.5"></label>
+          <label>per m³ of water <input name="twater" type="number" step="1" value="190"></label>
+          <label>per m³ of gas <input name="tgas" type="number" step="0.5" value="42"></label>
+        </div>
+      </fieldset>
+      <div class="bill" id="green-bill" aria-live="polite"></div>
+    </div>
+    <div class="panel">
+      <h3>Where you can save</h3>
+      <div class="usage" id="green-usage"></div>
+      <ul class="tips" id="green-tips"></ul>
+    </div>
+  </div>
+  <div class="tool panel">
+    <h3>Green grant application for the building</h3>
+    <div class="grant-grid" id="grant-opts"></div>
+    <div class="grant-out" id="grant-out" aria-live="polite"></div>
+    <button class="btn btn-primary" id="grant-make">Generate application</button>
+    <div id="grant-doc-wrap" hidden>
+      <div class="doc-head"><h3>Application</h3><button class="btn btn-ghost" id="grant-download">Download application</button></div>
+      <pre class="doc" id="grant-doc"></pre>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="module">
+  <header class="module-head">
+    <h2>Impact, model and plan</h2>
+    <p class="en">Impact, Business Model &amp; Pilot</p>
+    <p>How AffordBase changes people's lives, how it sustains itself, and what we will do in the first six months of the pilot.</p>
+  </header>
+
+  <div class="impact-grid">
+    <article class="panel">
+      <h3>The problem</h3>
+      <ul class="tips">
+        <li>Without a credit history and a down payment, a mortgage is out of reach. Young professionals, migrants and the self-employed stay renters.</li>
+        <li>Renting alone eats 40–60% of income. At that level, saving for a home of your own is almost impossible.</li>
+        <li>One month without income can end in eviction, and leases often contain unlawful terms.</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <h3>What makes us different</h3>
+      <ul class="tips">
+        <li>Not a single service but a path: co-living → track record → protection → ownership.</li>
+        <li>Paying rent and utilities on time becomes an asset: a reliability score.</li>
+        <li>Homes are bought 1 m² at a time, so the first step is affordable on an ordinary salary.</li>
+        <li>The city provides land, investors provide capital at 3–5%, members make regular payments.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="tool panel">
+    <h3>What we measure</h3>
+    <div class="kpis">
+      <div><strong>&lt; 30%</strong><span>of income spent on housing by members (today 40–60%)</span></div>
+      <div><strong>0</strong><span>evictions of fund members due to a temporary loss of income</span></div>
+      <div><strong>m²</strong><span>owned by members, growing every month</span></div>
+      <div><strong>% thin-file</strong><span>of members with no credit history who secured housing</span></div>
+    </div>
+  </div>
+
+  <div class="impact-grid">
+    <article class="panel">
+      <h3>How the platform sustains itself</h3>
+      <dl class="revenue">
+        <dt>Pool management</dt><dd>a fee paid by the co-op for managing the project, procurement and share accounting</dd>
+        <dt>Bulk procurement</dt><dd>supplier commission for a guaranteed order volume</dd>
+        <dt>City dashboard</dt><dd>an akimat subscription for analytics and tracking of transferred properties</dd>
+        <dt>Investment placement</dt><dd>a service fee from investors who fund pools</dd>
+      </dl>
+      <p class="small muted">The 1.5% transaction contribution is not our revenue: all of it goes to the members' mutual-aid fund.</p>
+    </article>
+    <article class="panel">
+      <h3>$10,000 pilot plan</h3>
+      <p class="muted small">6 months in Astana: 50 renters and one building pool.</p>
+      <div class="budget" role="img" aria-label="Budget split: 40% development, 20% legal, 15% pilot operations, 15% lease analysis, 10% outreach">
+        <span style="flex:40;background:var(--ink)"></span><span style="flex:20;background:var(--teal)"></span><span style="flex:15;background:var(--signal)"></span><span style="flex:15;background:var(--sky)"></span><span style="flex:10;background:var(--brick)"></span>
+      </div>
+      <ul class="budget-list">
+        <li><i style="background:var(--ink)"></i>Backend, accounts, payments<b>$4,000</b></li>
+        <li><i style="background:var(--teal)"></i>Legal review of leases and co-op charter under Kazakh law<b>$2,000</b></li>
+        <li><i style="background:var(--signal)"></i>Pilot: onboarding, interviews, member support<b>$1,500</b></li>
+        <li><i style="background:var(--sky)"></i>Lease analysis: testing on real leases<b>$1,500</b></li>
+        <li><i style="background:var(--brick)"></i>Outreach through NGOs and courier communities<b>$1,000</b></li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="tool panel">
+    <h3>UN Sustainable Development Goals</h3>
+    <ul class="sdg">
+      <li><b style="background:#E5243B">1</b>No poverty</li>
+      <li><b style="background:#FCC30B;color:var(--ink)">7</b>Affordable and clean energy</li>
+      <li><b style="background:#DD1367">10</b>Reduced inequalities</li>
+      <li><b style="background:#FD9D24;color:var(--ink)">11</b>Sustainable cities and communities</li>
+    </ul>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>Housing gets cheaper when people stick together</h2>
+  <p>AffordBase is a working prototype: every calculation on this page runs for real, while member, plot and regional data are illustrative. The lease review is a hint, not legal advice. Amounts are in Kazakhstani tenge (₸).</p>
+  <a class="btn btn-signal" href="#build">Start by choosing a plot</a>
+</section>
+</main>
+
+<footer class="foot">
+  <p>© 2026 AffordBase</p>
+  <p class="muted">Co-building, co-living and rent-to-own housing for people banks don't see.</p>
+  <p><a href="index.html" hreflang="ru" lang="ru">Русская версия</a></p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
